@@ -4,6 +4,9 @@
     --main: #3C37FE;
     --secondary: #2420E3;
     --text: #C7D0FF;
+    --label: #7E8794;
+    --form: #DDDFEA;
+    --form-bg: #F1F5FC;
 }
 
 * {
@@ -18,9 +21,50 @@ h1 {
     padding: 5% 0;
 }
 
+h2 {
+    font-size: 1.7rem;
+    margin: 5rem 0 3% 0;
+}
+
+label {
+    color: var(--label);
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.options {
+    display: flex;
+    column-gap: 1rem;
+}
+
+.looking, .play {
+    color: black;
+}
+
+.looking {
+    border: 1.5px solid var(--form);
+    padding: 0.8rem;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.looking:focus-within, .looking:hover, input[type=radio]:checked+label {
+    border: 1.5px solid var(--main);
+    background-color: var(--form-bg);
+    color: var(--main)
+}
+
+label.play {
+    background-color: var(--form-bg);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
 .container {
     height: 100vh;
-    box-sizing: border-box;
+    width: 80%;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 2fr 3fr;
     grid-column-gap: 2%;
@@ -34,7 +78,7 @@ h1 {
     display: grid;
     margin: 10%;
     display: grid;
-    grid-template-rows: 3fr 1fr;
+    grid-template-rows: 2fr 1fr;
 }
 
 .main {
@@ -57,7 +101,11 @@ h1 {
 .dark {
     background-color: var(--secondary);
     border-radius: 10px;
-    padding: 7% 5%;
+    padding: 0.8rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-height: 70%;
 }
 
 .dark div:nth-child(1) p {
@@ -68,8 +116,7 @@ h1 {
 
 .profile {
     display: flex;
-    padding: 3% 0;
-    column-gap: 5%;
+    column-gap: 1rem;
 }
 
 .profile p {
@@ -78,10 +125,62 @@ h1 {
 }
 
 .right {
-    padding: 8% 0 20% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right p {
+    font-size: 0.85rem;
+}
+
+.form-group {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
 }
 
 img {
     width: 40px;
     border-radius: 5px;
+}
+
+button {
+    background-color: var(--main);
+    color: white;
+    font-size: .85rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    max-width: 40%;
+    margin: 1rem 0 5rem 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--secondary);
+}
+
+input#name, input#email, input#number, select#dropdown, textarea {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid var(--form);
+    color: var(--label)
+}
+
+input.input-checkbox {
+    margin-right: 0.3rem;
+}
+
+input::placeholder, textarea::placeholder{
+    color: var(--form);
+}
+
+input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 1.5px solid var(--main);
+}
+
+input[type=radio], input[type=checkbox]{
+    accent-color: var(--main);
 }

@@ -37,18 +37,21 @@
             </div>
         </div>
         <div class="right">
-            <h2>Survey Form</h2>
-            <p>Come on, try the Survey Form.</p>
+            <div>
+                <h2>Survey Form</h2>
+                <p>Come on, try the Survey Form.</p>
+            </div>
+
             <form id="survey-form" method="post" action='https://register-demo.freecodecamp.org'>
 
-                <div class="form-group"><label id="name-label" for="first-name">Name<input id="name" name="name"
-                            type="text" required placeholder="Enter your Name" /></label>
+                <div class="form-group"><label id="name-label" for="first-name">Name</label><input id="name" name="name"
+                        type="text" required placeholder="Enter your Name" />
                 </div>
-                <div class="form-group"><label id="email-label" for="email">Email<input id="email" name="email"
-                            type="email" placeholder="Enter your Email" required /></label>
+                <div class="form-group"><label id="email-label" for="email">Email</label><input id="email" name="email"
+                        type="email" placeholder="Enter your Email" required />
                 </div>
                 <div class="form-group">
-                    <label id="number-label" for="number">Age<span class="clue">(optional)</span></label>
+                    <label id="number-label" for="number">Age (optional)</label>
                     <input type="number" name="age" id="number" min="10" max="99" class="form-control"
                         placeholder="Age" />
                 </div>
@@ -61,36 +64,42 @@
                     </select>
                 </div>
                 <div class="form-group"><label for="looking-label">Looking for?</label>
-                    <label id="food-label" for="food"><input id="projects" value="food" type="radio" name="looking"
-                            class="inline" />
-                        Food</label>
-                    <label id="shelter-label" for="shelter"><input id="designs" value="shelter" type="radio"
-                            name="looking" class="inline" />
-                        Shelter</label>
+                    <div class="options">
+                        <label class="looking" id="food-label" for="food"><input id="projects" value="food" type="radio"
+                                name="looking" class="inline" />
+                            Food</label>
+                        <label class="looking" id="shelter-label" for="shelter"><input id="designs" value="shelter"
+                                type="radio" name="looking" class="inline" />
+                            Shelter</label>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <p>
-                        What would you like to play with?
-                        <span class="clue">(Check all that apply)</span>
-                    </p>
-
-                    <label><input name="prefer" value="front-end-projects" type="checkbox" class="input-checkbox" />Yarn
-                        Balls</label>
                     <label>
-                        <input name="prefer" value="back-end-projects" type="checkbox"
-                            class="input-checkbox" />Boxes</label>
-                    <label><input name="prefer" value="data-visualization" type="checkbox" class="input-checkbox" />Cat
-                        Houses</label>
-                    <label><input name="prefer" value="challenges" type="checkbox" class="input-checkbox" />Kitty
-                        Duster</label>
+                        What would you like to play with? (Check all that apply)
+                    </label>
+                    <div class="options"><label class="play"><input name="prefer" value="front-end-projects"
+                                type="checkbox" class="input-checkbox" />Yarn
+                            Balls</label>
+                        <label class="play">
+                            <input name="prefer" value="back-end-projects" type="checkbox"
+                                class="input-checkbox" />Boxes</label>
+                        <label class="play"><input name="prefer" value="data-visualization" type="checkbox"
+                                class="input-checkbox" />Cat
+                            Houses</label>
+                        <label class="play"><input name="prefer" value="challenges" type="checkbox"
+                                class="input-checkbox" />Kitty
+                            Duster</label>
+                    </div>
                 </div>
-                <label id="bio-label" for="bio">Provide a Bio
+                <div class="form-group">
+                    <label id="bio-label" for="bio">Provide a Bio</label>
                     <textarea id="bio" name="bio" rows="3" cols="30"
                         placeholder="I was sitting in my favourite box when..."></textarea>
-                </label>
+
+                </div>
                 <div class="form-group">
                     <button type="submit" id="submit" class="submit-button">
-                        Submit
+                        Submit the Form
                     </button>
                 </div>
         </div>
